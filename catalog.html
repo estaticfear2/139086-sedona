@@ -3,30 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона: Гостиницы</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-    <header class="main-header">
-      <div class="layout-positioner">
-        <div class="header-logo">
-          <a href="">
-            <img src="img/index-logo.png" class="logo" width="138" height="70" alt="index-logo">
-          </a>
-        </div>
+  <body class="inner">
+    <div class="layout-container">
+      <header class="main-header">
         <nav class="main-navigation">
-          <ul class="main-navigation-item">
-            <li><a href="#">Информация</a></li>
-            <li><a href="#">Фото и видео</a></li>
-            <li><a href="#">Карта штата</a></li>
-            <li><a href="#">Гостиницы</a></li>
+          <!--
+          <a href="index.html" class="header-logo">
+            <img src="img/index-logo.png" class="index-logo" width="138" height="70" alt="index-logo">
+          </a>
+          <ul>
+            <li class="to-left"><a href="#">Информация</a></li>
+            <li class="to-left"><a href="#">Фото и видео</a></li>
+            <li class="to-right"><a href="#">Карта штата</a></li>
+            <li class="to-right">
+              <a href="catalog.html">Гостиницы</a>
+            </li>
           </ul>
+          -->
         </nav>
-      </div>
-    </header>
-    <main class="index-content">
-      <div class="search-hotels layout-positioner clearfix">
+      </header>
+    <main class="catalog-content">
+      <div class="search-hotels clearfix">
         <form action="#" method="get" class="clearfix">
-          <div class="search-structure">
+          <div class="search-item">
             <h3 class="search-title">Инфраструктура:</h3>
             <input type="checkbox" name="pool" id="pool" checked>
             <label for="pool">Бассейн</label>
@@ -35,7 +38,7 @@
             <input type="checkbox" name="wifi" id="wifi">
             <label for="wifi">WI-FI</label>            
           </div>
-          <div class="search-property-type">
+          <div class="search-item">
             <h3 class="search-title">Тип жилья</h3>
             <input type="checkbox" name="hotel" id="hotel" checked>
             <label for="hotel">Гостиница</label>
@@ -44,7 +47,7 @@
             <input type="checkbox" name="apartaments" id="apartaments"  checked>
             <label for="apartaments">Апартаменты</label>            
           </div>
-          <div class="search-price-range">
+          <div class="search-item">
             <h3 class="search-title">Тип жилья</h3>
             <div class="price-range">
               <div class="price-range-container">
@@ -54,26 +57,24 @@
               <!-- -->
               <input type="range" class="range min" step="1" min="0" max="3000">
               <input type="range" class="range max" step="1" min="0" max="3000">
+              <input type="submit" class="submit" id="submit" value="Показать">
               <!--сделать дивами?-->
             </div>
           </div>
-          <input type="submit" class="submit" id="submit" value="Показать">
         </form>
       </div>
-      <div class="results layout-positioner">
+      <div class="results">
         <p>Найдено:3</p>
         <p>Сортировка:</p>
-          <ul>
-            <li><a href="#" class="sort checked"></a></li>
-            <li><a href="#" class="sort"></a></li>
-            <li><a href="#" class="sort"></a></li>
-          </ul>
-        <a href="#" class="up"></a>
-        <a href="#" class="down"></a>
+        <p><a href="#" class="sort checked">по цене</a></p>
+        <p><a href="#" class="sort"></a>по типу</p>
+        <p><a href="#" class="sort"></a>по рейтингу</p>
+        <a href="#" class="up">1</a>
+        <a href="#" class="down">1</a>
       </div>
-      <div class="hotel-item layout-positioner">
+      <div class="hotel-item clearfix">
         <img src="img/hotel-item1.jpg" class="hotel-image" width="135" height="90" alt="hotel 1">
-        <section class="item clearfix">
+        <section class="item">
           <h3>Amara resort & spa</h3>
           <span>Гостиница</span>
           <span>от 3500 Р.</span>
@@ -84,9 +85,9 @@
           <span class="raiting">Рейтинг:8,5</span>
         </div>
       </div>
-      <div class="hotel-item layout-positioner">
+      <div class="hotel-item clearfix">
         <img src="img/hotel-item2.jpg" class="hotel-image" width="135" height="90" alt="hotel 2">
-        <section class="item clearfix">
+        <section class="item">
           <h3 class="hotel-title">Desert Quail Inn</h3>
           <span>Мотель</span>
           <span>от 2000 Р.</span>
@@ -97,9 +98,9 @@
           <span class="raiting">Рейтинг:8,9</span>
         </div>
       </div>
-      <div class="hotel-item layout-positioner">
+      <div class="hotel-item clearfix">
         <img src="img/hotel-item3.jpg" class="hotel-image" width="135" height="90" alt="hotel 3">
-        <section class="item clearfix">
+        <section class="item">
           <h3 class="hotel-title">Villas At Poco Diablo</h3>
           <span>Апартаменты</span>
           <span>от 4000 Р.</span>
@@ -112,18 +113,21 @@
       </div>
     </main>
     <footer class="main-footer clearfix">
-      <section class="footer-tag">
-        <p>#visitsedona</p>
-      </section>
-      <section class="footer-social">
-        <a class="social-btn social-btn-vk" href="#"></a>
-        <a class="social-btn social-btn-fb" href="#"></a>
-        <a class="social-btn social-btn-yt" href="#"></a>
-      </section>
-      <section class="footer-copyright">
-        <p>Website by</p>
-        <a href="#" class="copyright-name"></a>
-      </section>
+        <div class="footer-container">
+          <section class="footer-tag">
+            <p>#visitsedona</p>
+          </section>
+          <section class="footer-social">
+            <a class="social-btn social-btn-vk" href="#"></a>
+            <a class="social-btn social-btn-fb" href="#"></a>
+            <a class="social-btn social-btn-inst" href="#"></a>
+          </section>
+          <section class="footer-copyright">
+            <p>Website by</p>
+            <a href="#" class="copyright-name"></a>
+          </section>
+      </div>
     </footer>
+    </div>
   </body>
 </html>

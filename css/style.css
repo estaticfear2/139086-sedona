@@ -3,7 +3,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: #000000;
-  font-family: "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
 
@@ -24,3 +24,269 @@ h3 {
   font-size: 30px;
 }
 
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.main-header {
+
+}
+
+.layout-container {
+  position: relative;
+  width: 768px;
+  margin: 0 auto;
+  /* для сетки*/
+  outline: 1px solid black;
+}
+
+.main-navigation {
+  position: relative;
+  outline: 1px solid black;
+  margin: 0 46px;
+  min-height: 56px;
+}
+
+.index-content-image {
+  position: relative;
+  margin-bottom: 49px;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  height: 512px;
+  padding: 0;
+  outline: 1px solid red;
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 37px;
+  bottom: 5px;
+}
+
+.index-content-title {
+  margin-bottom: 53px;
+  min-height: 105px;
+  outline: 1px solid green;
+}
+
+.features {
+  margin-bottom: 55px;
+  min-height: 1098px;
+  outline: 1px solid blue;
+}
+
+.container {
+  width: 768px;
+}
+
+.features-item {
+  float: left;
+  width: 33%;
+  min-height: 256px;
+  outline: 1px solid yellow;
+}
+
+.icon {
+  margin-top: 37px;
+  margin-bottom: 37px;
+}
+
+.search-form-title {
+  min-height: 136px;
+}
+
+.search-btn {
+  display: block;
+  width: 570px;
+  margin: 0 auto;
+  min-height: 85px;
+  outline: 1px solid brown;
+}
+
+form {
+  display: none;
+}
+
+.map {
+  position: relative;
+  width: 768px;
+  height: 593px;
+  background: #000000 url("../img/map.jpg") no-repeat 0px 0px;
+  background-size: 768px 593px;
+}
+
+/*----------------------inner---------------------------*/
+.search-hotels {
+  min-height: 217px;
+}
+
+.catalog-content {
+  padding: 0 46px;
+}
+
+.search-item {
+  float: left;
+  width: 33.3%;
+}
+
+.results {
+  min-height: 85px;
+  border-bottom: 1px solid #e5e5e5;
+  text-align: center;
+}
+
+.results p {
+  display: inline-block;
+  outline: 1px solid black; 
+}
+
+.hotel-item {
+  min-height: 150px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-image {
+  display: block;
+  width: 153px;
+  float: left;
+}
+
+.item {
+  display: block;
+  float: left;
+  width: 373px;
+}
+
+.stars {
+  float: right;
+  width: 153px;
+}
+
+/*--------------------footer----------------------------*/
+.main-footer {
+  width: 768px;
+}
+
+.footer-container {
+  position: absolute;
+  min-height: 120px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.inner .footer-container {
+  position: static;
+  min-height: 120px;
+}
+
+.footer-tag {
+  float: left;
+  width: 256px;
+  outline: 1px solid black;
+}
+
+.footer-social {
+  float: left;
+  width: 256px;
+  outline: 1px solid black;
+}
+
+.footer-copyright {
+  float: right;
+  width: 256px;
+  outline: 1px solid black;
+}
+
+/*
+.layout-container {
+  width: 768px;
+  margin: 0 auto;
+}
+
+.main-navigation {
+  position: relative;
+  width: 676px;
+  margin: 0 auto;
+}
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0px;
+}
+
+.main-navigation li {
+  display: inline-block;
+  width: 20%; 
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  margin: 15px 0;
+  vertical-align: middle;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.main-navigation li:nth-child(3) {
+  margin-left: 20%;
+}
+
+.main-navigation a{
+  text-decoration: none;
+  color: black;
+}
+
+.to-left {
+  text-align: left;
+}
+
+.to-right {
+  text-align: right;
+}
+
+.header-logo img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.index-content {
+}
+
+.index-content-image{
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.index-content-image .logo{
+  width: 768px;
+  height: 514px;
+  z-index: 1;
+}
+
+.index-content-image .mask {
+  position: absolute;
+  bottom: 3px;
+  left: 0px;
+  width: 768px;
+  height: 37px;
+  z-index: 2;
+}
+
+.index-content-title {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+  line-height: 26px;
+}
+*/
