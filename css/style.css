@@ -3,6 +3,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: #000000;
+  background-color: gray;
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
 }
@@ -11,6 +12,7 @@ h2, h3 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+  text-align: center;
 }
 
 h3 {
@@ -36,77 +38,151 @@ h3 {
 
 .layout-container {
   position: relative;
-  width: 768px;
+  width: 1200px;
   margin: 0 auto;
-  /* для сетки*/
-  outline: 1px solid black;
+  background-color: #ffffff;
 }
 
 .main-navigation {
   position: relative;
-  outline: 1px solid black;
-  margin: 0 46px;
-  min-height: 56px;
+/*  margin: 0 72px;*/
+  z-index: 1;
 }
+
+.main-navigation ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0px;
+}
+
+.main-navigation li {
+  display: inline-block;
+  width: 20%; 
+  font-size: 14px;
+  line-height: 26px;
+  margin: 15px 0;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.main-navigation li:nth-child(3) {
+  margin-left: 20%;
+}
+
+.main-navigation a{
+  text-decoration: none;
+  color: black;
+}
+
+.header-logo img{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/*-------------------------index-----------------------------*/
 
 .index-content-image {
   position: relative;
-  margin-bottom: 49px;
+  margin-bottom: 53px;
 }
 
 .logo {
-  position: relative;
   width: 100%;
-  height: 512px;
-  padding: 0;
-  outline: 1px solid red;
+  height: 100%;
 }
 
 .mask {
   position: absolute;
   width: 100%;
-  height: 37px;
+  height: 57px;
   bottom: 5px;
 }
 
 .index-content-title {
-  margin-bottom: 53px;
-  min-height: 105px;
-  outline: 1px solid green;
+  margin-bottom: 51px;
+  text-align: center;
+}
+
+.index-content-title h2 {
+  margin-bottom: 34px;
 }
 
 .features {
   margin-bottom: 55px;
-  min-height: 1098px;
-  outline: 1px solid blue;
 }
 
 .container {
-  width: 768px;
+  width: 1200px;
+  position: relative;
 }
 
 .features-item {
   float: left;
-  width: 33%;
-  min-height: 256px;
-  outline: 1px solid yellow;
+  width: 33.33%;
+  text-align: center;
 }
 
-.icon {
-  margin-top: 37px;
-  margin-bottom: 37px;
+.features-item img {
+  position: absolute;
+  right: 0px;
+}
+
+.image-left {
+  float: left;
+}
+
+.features-item > h2 {
+  width: 40%;
+  margin: 54px auto 25px auto;
+  line-height: 21px;
+}
+
+.features-item > p {
+  margin: 23px 49px 0px 49px;
+}
+
+.features-item p:last-child {
+  margin-bottom: 50px;
+}
+
+.icon .features-item h2 {
+  position: relative;
+  margin-top: 160px;
+  margin-bottom: 25px;
+}
+
+.icon .features-item p {
+  margin-bottom: 85px;
 }
 
 .search-form-title {
-  min-height: 136px;
+  margin-bottom: 50px;
+}
+
+.search-form-title h2 {
+  margin-bottom: 30px;
+}
+
+.search-form-title p {
+  text-align: center;
 }
 
 .search-btn {
   display: block;
   width: 570px;
   margin: 0 auto;
-  min-height: 85px;
-  outline: 1px solid brown;
+  padding: 31px 0;
+  text-align: center;
+  text-decoration: none;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #ffffff;
+  background-color: #766357;
 }
 
 form {
@@ -115,14 +191,15 @@ form {
 
 .map {
   position: relative;
-  width: 768px;
+  width: 1200px;
   height: 593px;
   background: #000000 url("../img/map.jpg") no-repeat 0px 0px;
-  background-size: 768px 593px;
 }
 
 /*----------------------inner---------------------------*/
 .search-hotels {
+  background: #426984 url("../img/catalog-bg.jpg") no-repeat 0px 0px;
+  width: 100%;
   min-height: 217px;
 }
 
@@ -132,7 +209,7 @@ form {
 
 .search-item {
   float: left;
-  width: 33.3%;
+  width: 33.33%;
 }
 
 .results {
@@ -152,13 +229,11 @@ form {
 }
 
 .hotel-image {
-  display: block;
   width: 153px;
   float: left;
 }
 
 .item {
-  display: block;
   float: left;
   width: 373px;
 }
@@ -169,124 +244,48 @@ form {
 }
 
 /*--------------------footer----------------------------*/
-.main-footer {
-  width: 768px;
-}
 
-.footer-container {
+.main-footer {
   position: absolute;
-  min-height: 120px;
+  width: 100%;
   bottom: 0px;
   left: 0px;
-  z-index: 100;
-  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding-top: 28px;
+  padding-bottom: 30px;
+  text-align: center;
 }
 
-.inner .footer-container {
+.inner .main-footer {
   position: static;
-  min-height: 120px;
 }
 
 .footer-tag {
   float: left;
-  width: 256px;
-  outline: 1px solid black;
+  width: 33.33%;
+}
+
+.footer-tag p {
+  font-size: 21px;
 }
 
 .footer-social {
   float: left;
-  width: 256px;
-  outline: 1px solid black;
+  width: 33.33%;
+  font-size: 0;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  background-color: #81b3d2;
+  vertical-align: bottom;
+  margin: 8px 3px;
 }
 
 .footer-copyright {
   float: right;
-  width: 256px;
-  outline: 1px solid black;
+  width: 33.33%;
 }
-
-/*
-.layout-container {
-  width: 768px;
-  margin: 0 auto;
-}
-
-.main-navigation {
-  position: relative;
-  width: 676px;
-  margin: 0 auto;
-}
-
-.main-navigation ul {
-  list-style: none;
-  padding: 0;
-  font-size: 0px;
-}
-
-.main-navigation li {
-  display: inline-block;
-  width: 20%; 
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  margin: 15px 0;
-  vertical-align: middle;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.main-navigation li:nth-child(3) {
-  margin-left: 20%;
-}
-
-.main-navigation a{
-  text-decoration: none;
-  color: black;
-}
-
-.to-left {
-  text-align: left;
-}
-
-.to-right {
-  text-align: right;
-}
-
-.header-logo img{
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
-}
-
-.index-content {
-}
-
-.index-content-image{
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.index-content-image .logo{
-  width: 768px;
-  height: 514px;
-  z-index: 1;
-}
-
-.index-content-image .mask {
-  position: absolute;
-  bottom: 3px;
-  left: 0px;
-  width: 768px;
-  height: 37px;
-  z-index: 2;
-}
-
-.index-content-title {
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  font-weight: 700;
-  line-height: 26px;
-}
-*/
