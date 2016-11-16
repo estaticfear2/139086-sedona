@@ -45,7 +45,6 @@ h3 {
 
 .main-navigation {
   position: relative;
-/*  margin: 0 72px;*/
   z-index: 1;
 }
 
@@ -320,7 +319,8 @@ form {
 }
 
 .item span {
-  margin-right: 50px;
+  display: inline-block;
+  width: 111px;
 }
 
 .btn {
