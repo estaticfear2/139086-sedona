@@ -25,86 +25,103 @@
         </nav>
       </header>
     <main class="catalog-content">
-      <div class="search-hotels clearfix">
+      <div class="search-hotels">
         <form action="#" method="get" class="clearfix">
           <div class="search-item">
             <h3 class="search-title">Инфраструктура:</h3>
-            <input type="checkbox" name="pool" id="pool" checked>
-            <label for="pool">Бассейн</label>
-            <input type="checkbox" name="parking" id="parking">
-            <label for="parking">Парковка</label>
-            <input type="checkbox" name="wifi" id="wifi">
-            <label for="wifi">WI-FI</label>            
+            <ul>
+              <li>
+                <input type="checkbox" name="pool" id="pool" checked>
+                <label for="pool">Бассейн</label>
+              </li>
+              <li>
+                <input type="checkbox" name="parking" id="parking">
+                <label for="parking">Парковка</label>
+              </li>
+              <li>
+                <input type="checkbox" name="wifi" id="wifi">
+                <label for="wifi">WI-FI</label>            
+              </li>
+            </ul>
           </div>
           <div class="search-item">
             <h3 class="search-title">Тип жилья</h3>
-            <input type="checkbox" name="hotel" id="hotel" checked>
-            <label for="hotel">Гостиница</label>
-            <input type="checkbox" name="motel" id="motel" checked>
-            <label for="motel">Мотель</label>
-            <input type="checkbox" name="apartaments" id="apartaments"  checked>
-            <label for="apartaments">Апартаменты</label>            
+            <ul>
+              <li>
+                <input type="checkbox" name="hotel" id="hotel" checked>
+                <label for="hotel">Гостиница</label>
+              </li>
+              <li>
+                <input type="checkbox" name="motel" id="motel" checked>
+                <label for="motel">Мотель</label>
+              </li>
+              <li>
+                <input type="checkbox" name="apartaments" id="apartaments"  checked>
+                <label for="apartaments">Апартаменты</label>      
+              </li>  
+            </ul>
           </div>
           <div class="search-item">
-            <h3 class="search-title">Тип жилья</h3>
-            <div class="price-range">
-              <div class="price-range-container">
-                <input type="text" class="min-price" value="от 0">
-                <input type="text" class="max-price" value="от 3000">
+            <h3 class="search-title">Стоимость в сутки (р):</h3>
+              <div class="price-controls">
+                <label class="min-price">от <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">до <input type="text" name="max-price" value="3000"></label>
               </div>
-              <!-- -->
-              <input type="range" class="range min" step="1" min="0" max="3000">
-              <input type="range" class="range max" step="1" min="0" max="3000">
-              <input type="submit" class="submit" id="submit" value="Показать">
-              <!--сделать дивами?-->
-            </div>
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
+              </div>
+              <button class="btn-transparent" type="submit">Показать</button>
           </div>
         </form>
       </div>
       <div class="results">
-        <p>Найдено:3</p>
-        <p>Сортировка:</p>
+        <p class="results-title">Найдено: 3</p>
+        <p class="results-type">Сортировка:</p>
         <p><a href="#" class="sort checked">по цене</a></p>
-        <p><a href="#" class="sort"></a>по типу</p>
-        <p><a href="#" class="sort"></a>по рейтингу</p>
-        <a href="#" class="up">1</a>
-        <a href="#" class="down">1</a>
+        <p><a href="#" class="sort">по типу</a></p>
+        <p><a href="#" class="sort">по рейтингу</a></p>
+        <a href="#" class="triangle up"></a>
+        <a href="#" class="triangle down"></a>
       </div>
       <div class="hotel-item clearfix">
         <img src="img/hotel-item1.jpg" class="hotel-image" width="135" height="90" alt="hotel 1">
-        <section class="item">
-          <h3>Amara resort & spa</h3>
+        <article class="item"> 
+          <h3>Amara resort &amp; spa</h3>
           <span>Гостиница</span>
           <span>от 3500 Р.</span>
           <a href="#" class="btn info">Подробнее</a>
           <a href="#" class="btn reserve">Забронировать</a>
-        </section>
+        </article>
         <div class="stars four">
           <span class="raiting">Рейтинг:8,5</span>
         </div>
       </div>
       <div class="hotel-item clearfix">
         <img src="img/hotel-item2.jpg" class="hotel-image" width="135" height="90" alt="hotel 2">
-        <section class="item">
-          <h3 class="hotel-title">Desert Quail Inn</h3>
+        <article class="item">
+          <h3>Desert Quail Inn</h3>
           <span>Мотель</span>
           <span>от 2000 Р.</span>
           <a href="#" class="btn info">Подробнее</a>
           <a href="#" class="btn reserve">Забронировать</a>
-        </section>
+        </article>
         <div class="stars two">
           <span class="raiting">Рейтинг:8,9</span>
         </div>
       </div>
       <div class="hotel-item clearfix">
         <img src="img/hotel-item3.jpg" class="hotel-image" width="135" height="90" alt="hotel 3">
-        <section class="item">
-          <h3 class="hotel-title">Villas At Poco Diablo</h3>
+        <article class="item">
+          <h3>Villas At Poco Diablo</h3>
           <span>Апартаменты</span>
           <span>от 4000 Р.</span>
           <a href="#" class="btn info">Подробнее</a>
           <a href="#" class="btn reserve">Забронировать</a>
-        </section>
+        </article>
         <div class="stars three">
           <span class="raiting">Рейтинг:9,2</span>
         </div>

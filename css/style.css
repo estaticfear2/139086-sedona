@@ -37,10 +37,10 @@ h3 {
 }
 
 .layout-container {
-  position: relative;
   width: 1200px;
   margin: 0 auto;
   background-color: #ffffff;
+  font-size: 0;
 }
 
 .main-navigation {
@@ -52,6 +52,7 @@ h3 {
 .main-navigation ul {
   list-style: none;
   padding: 0;
+  margin: 0;
   font-size: 0px;
 }
 
@@ -85,6 +86,10 @@ h3 {
 
 /*-------------------------index-----------------------------*/
 
+.index-content {
+/*  font-size: 14px;*/
+}
+
 .index-content-image {
   position: relative;
   margin-bottom: 53px;
@@ -99,54 +104,53 @@ h3 {
   position: absolute;
   width: 100%;
   height: 57px;
-  bottom: 5px;
+  bottom: 10px;
+  left: 0px;
 }
 
 .index-content-title {
-  margin-bottom: 51px;
+  margin-bottom: 48px;
   text-align: center;
 }
 
 .index-content-title h2 {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .features {
   margin-bottom: 55px;
 }
 
-.container {
-  width: 1200px;
-  position: relative;
-}
-
 .features-item {
   float: left;
   width: 33.33%;
   text-align: center;
+  outline: 1px solid black;
 }
 
-.features-item img {
-  position: absolute;
-  right: 0px;
-}
-
-.image-left {
+.container img {
+  width: 800px;
+  height: 256px;
   float: left;
 }
 
-.features-item > h2 {
+.features-item h2 {
   width: 40%;
   margin: 54px auto 25px auto;
+  font-size: 21px;
   line-height: 21px;
 }
 
-.features-item > p {
-  margin: 23px 49px 0px 49px;
+.features-item p {
+  margin: 21px 49px 0px 49px;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .features-item p:last-child {
-  margin-bottom: 50px;
+  margin-bottom: 52px;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .icon .features-item h2 {
@@ -156,7 +160,7 @@ h3 {
 }
 
 .icon .features-item p {
-  margin-bottom: 85px;
+  margin-bottom: 83px;
 }
 
 .search-form-title {
@@ -190,52 +194,143 @@ form {
 }
 
 .map {
-  position: relative;
   width: 1200px;
   height: 593px;
   background: #000000 url("../img/map.jpg") no-repeat 0px 0px;
 }
 
 /*----------------------inner---------------------------*/
+.catalog-content {
+  width: 1200px;
+  
+}
+
 .search-hotels {
   background: #426984 url("../img/catalog-bg.jpg") no-repeat 0px 0px;
-  width: 100%;
+  padding: 0 72px;
   min-height: 217px;
 }
 
-.catalog-content {
-  padding: 0 46px;
+.search-hotels form {
+  width: 100%;
 }
 
 .search-item {
   float: left;
-  width: 33.33%;
+  width: 254px;
+}
+
+.search-item:last-child {
+  float: right;
+  width: 330px;
+}
+
+.search-item h3 {
+  text-align: left;
+}
+
+.search-item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.search-item label {
+  color: white;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .results {
-  min-height: 85px;
+  position: relative;
   border-bottom: 1px solid #e5e5e5;
-  text-align: center;
+  font-size: 0;
+  padding: 9px 72px;
 }
 
 .results p {
   display: inline-block;
+  font-size: 12px;
+  line-height: 18px;
+  margin-right: 30px;
   outline: 1px solid black; 
+  vertical-align: middle;
+}
+
+.results .results-title {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  margin-right: 50px;
+}
+
+.results .results-type {
+  margin-right: 40px;
+}
+
+.triangle {
+  position: absolute;
+  top: 35px;
+  width: 0;
+  height: 0;
+}
+
+.up {
+  right: 96px;  
+  border: 5px solid transparent;
+  border-bottom: 10px solid black;
+}
+
+.down {
+  right: 74px;
+  top: 40px;
+  border: 5px solid transparent;
+  border-top: 10px solid black;
 }
 
 .hotel-item {
-  min-height: 150px;
+  width: 1056px;
   border-bottom: 1px solid #e5e5e5;
+  padding: 30px 72px;
+  color: black;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .hotel-image {
-  width: 153px;
+  width: 135px;
+  height: 90px;
   float: left;
+  margin-right: 30px;
 }
 
 .item {
   float: left;
-  width: 373px;
+  width: 273px;
+}
+
+.item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 21px;
+  line-height: 26px;
+  color: black;
+  vertical-align: top;
+  text-align: left;
+}
+
+.item span {
+  margin-right: 50px;
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  background: #81b3d2;
+  padding: 9px 17px;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
 }
 
 .stars {
@@ -246,19 +341,19 @@ form {
 /*--------------------footer----------------------------*/
 
 .main-footer {
-  position: absolute;
+  display: inline-block;
   width: 100%;
-  bottom: 0px;
-  left: 0px;
-  z-index: 2;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding-top: 28px;
+  background-color: white;
+  padding-top: 38px;
   padding-bottom: 30px;
   text-align: center;
+  margin-top: -130px;
+  opacity: 0.9;
+  vertical-align: center;
 }
 
 .inner .main-footer {
-  position: static;
+  margin-top: 0;
 }
 
 .footer-tag {
@@ -268,6 +363,7 @@ form {
 
 .footer-tag p {
   font-size: 21px;
+  line-height: 26px;
 }
 
 .footer-social {
@@ -288,4 +384,5 @@ form {
 .footer-copyright {
   float: right;
   width: 33.33%;
+  font-size: 14px;
 }
