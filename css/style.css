@@ -110,6 +110,7 @@ h3 {
 .index-content-title {
   margin-bottom: 48px;
   text-align: center;
+  font-size: 14px;
 }
 
 .index-content-title h2 {
@@ -172,6 +173,7 @@ h3 {
 
 .search-form-title p {
   text-align: center;
+  font-size: 14px;
 }
 
 .search-btn {
@@ -290,7 +292,7 @@ form {
 .hotel-item {
   width: 1056px;
   border-bottom: 1px solid #e5e5e5;
-  padding: 30px 72px;
+  padding: 24px 72px;
   color: black;
   font-size: 14px;
   line-height: 21px;
@@ -300,7 +302,7 @@ form {
   width: 135px;
   height: 90px;
   float: left;
-  margin-right: 30px;
+  margin: 6px 30px 6px 0;
 }
 
 .item {
@@ -310,7 +312,7 @@ form {
 
 .item h3 {
   margin: 0;
-  padding: 0;
+  margin-bottom: 10px;
   font-size: 21px;
   line-height: 26px;
   color: black;
@@ -321,13 +323,14 @@ form {
 .item span {
   display: inline-block;
   width: 111px;
+  margin-bottom: 12px;
 }
 
 .btn {
   display: inline-block;
   color: white;
   background: #81b3d2;
-  padding: 9px 17px;
+  padding: 3px 17px;
   vertical-align: top;
   text-align: center;
   text-decoration: none;
@@ -336,6 +339,7 @@ form {
 .stars {
   float: right;
   width: 153px;
+  margin-top: 70px;
 }
 
 /*--------------------footer----------------------------*/
@@ -344,10 +348,10 @@ form {
   display: inline-block;
   width: 100%;
   background-color: white;
-  padding-top: 38px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 38px;
   text-align: center;
-  margin-top: -130px;
+  margin-top: -120px;
   opacity: 0.9;
   vertical-align: center;
 }
@@ -364,21 +368,56 @@ form {
 .footer-tag p {
   font-size: 21px;
   line-height: 26px;
+  padding-top: 4px;
 }
 
 .footer-social {
   float: left;
   width: 33.33%;
   font-size: 0;
+  padding-top: 9px;
+  padding-left: 2px;
 }
 
 .social-btn {
   display: inline-block;
+  position: relative;
   width: 46px;
-  height: 46px;
+  height: 48px;
   background-color: #81b3d2;
-  vertical-align: bottom;
-  margin: 8px 3px;
+  vertical-align: top;
+  font-size: 0;
+  margin-top: 7px;
+  margin-right: 6px;
+  margin-left: 0;
+}
+
+.social-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+}
+
+.social-btn-tw::before {
+  width: 17px;
+  height: 15px;
+  background-position: -391px -5px;
+}
+
+.social-btn-fb::before {
+  width: 10px;
+  height: 19px;
+  background-position: -371px -5px;
+}
+
+.social-btn-yt::before {
+  width: 20px;
+  height: 16px;
+  background-position: -418px -5px;
 }
 
 .footer-copyright {
@@ -386,3 +425,62 @@ form {
   width: 33.33%;
   font-size: 14px;
 }
+
+
+
+
+
+/*
+sprite
+
+.sprite {
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+}
+
+
+.sprite-features-icon-1 {
+    width: 75px;
+    height: 72px;
+    background-position: -5px -5px;
+}
+
+.sprite-features-icon2 {
+    width: 74px;
+    height: 70px;
+    background-position: -90px -5px;
+}
+
+.sprite-features-icon3 {
+    width: 64px;
+    height: 75px;
+    background-position: -174px -5px;
+}
+
+.sprite-icon-copyright {
+  width: 113px;
+  height: 39px;
+  background-position: -248px -5px;
+}
+
+
+.sprite-icon-fb {
+    width: 10px;
+    height: 19px;
+    background-position: -371px -5px;
+}
+
+.sprite-icon-tw {
+    width: 17px;
+    height: 15px;
+    background-position: -391px -5px;
+}
+
+.sprite-icon-yt {
+    width: 20px;
+    height: 16px;
+    background-position: -418px -5px;
+}
+
+/*
