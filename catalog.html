@@ -15,10 +15,10 @@
             <img src="img/index-logo.png" class="index-logo" width="138" height="70" alt="index-logo">
           </a>
           <ul>
-            <li class="to-left"><a href="#">Информация</a></li>
-            <li class="to-left"><a href="#">Фото и видео</a></li>
-            <li class="to-right"><a href="#">Карта штата</a></li>
-            <li class="to-right">
+            <li><a href="#">Информация</a></li>
+            <li><a href="#">Фото и видео</a></li>
+            <li><a href="#">Карта штата</a></li>
+            <li class="active">
               <a href="catalog.html">Гостиницы</a>
             </li>
           </ul>
@@ -27,41 +27,57 @@
     <main class="catalog-content">
       <div class="search-hotels">
         <form action="#" method="get" class="clearfix">
-          <div class="search-item">
+          <div class="search-item item-1">
             <h3 class="search-title">Инфраструктура:</h3>
             <ul>
               <li>
-                <input type="checkbox" name="pool" id="pool" checked>
-                <label for="pool">Бассейн</label>
+                <label for="pool">
+                  <input type="checkbox" name="pool" id="pool" checked>
+                  <span class="checkbox-indicator"></span>          Бассейн
+                </label>
               </li>
               <li>
-                <input type="checkbox" name="parking" id="parking">
-                <label for="parking">Парковка</label>
+                <label for="parking">
+                  <input type="checkbox" name="parking" id="parking" checked disabled>
+                  <span class="checkbox-indicator"></span>
+                  Парковка
+                </label>
               </li>
               <li>
-                <input type="checkbox" name="wifi" id="wifi">
-                <label for="wifi">WI-FI</label>            
+                <label for="wifi">
+                  <input type="checkbox" name="wifi" id="wifi" disabled>
+                  <span class="checkbox-indicator"></span>
+                  WI-FI
+                </label>            
               </li>
             </ul>
           </div>
-          <div class="search-item">
-            <h3 class="search-title">Тип жилья</h3>
+          <div class="search-item item-2">
+            <h3 class="search-title">Тип жилья:</h3>
             <ul>
               <li>
-                <input type="checkbox" name="hotel" id="hotel" checked>
-                <label for="hotel">Гостиница</label>
+                <label for="hotel">
+                  <input type="checkbox" name="hotel" id="hotel" checked>
+                  <span class="checkbox-indicator"></span>Гостиница
+                </label>
               </li>
               <li>
-                <input type="checkbox" name="motel" id="motel" checked>
-                <label for="motel">Мотель</label>
+                <label for="motel">
+                  <input type="checkbox" name="motel" id="motel" checked>
+                  <span class="checkbox-indicator"></span>
+                  Мотель
+                </label>
               </li>
               <li>
-                <input type="checkbox" name="apartaments" id="apartaments"  checked>
-                <label for="apartaments">Апартаменты</label>      
+                <label for="apartaments">
+                  <input type="checkbox" name="apartaments" id="apartaments"  checked>
+                  <span class="checkbox-indicator"></span>
+                  Апартаменты
+                </label>      
               </li>  
             </ul>
           </div>
-          <div class="search-item">
+          <div class="search-item filter-range">
             <h3 class="search-title">Стоимость в сутки (р):</h3>
               <div class="price-controls">
                 <label class="min-price">от <input type="text" name="min-price" value="0"></label>
@@ -81,11 +97,11 @@
       <div class="results">
         <p class="results-title">Найдено: 3</p>
         <p class="results-type">Сортировка:</p>
-        <p><a href="#" class="sort checked">по цене</a></p>
+        <p class="active"><a class="sort">по цене</a></p>
         <p><a href="#" class="sort">по типу</a></p>
         <p><a href="#" class="sort">по рейтингу</a></p>
-        <a href="#" class="triangle up"></a>
-        <a href="#" class="triangle down"></a>
+        <a href="#" class="triangle up active"></a>
+        <a class="triangle down"></a>
       </div>
       <div class="hotel-item clearfix">
         <img src="img/hotel-item1.jpg" class="hotel-image" width="135" height="90" alt="hotel 1">
@@ -97,7 +113,7 @@
           <a href="#" class="btn reserve">Забронировать</a>
         </article>
         <div class="stars four">
-          <span class="raiting">Рейтинг:8,5</span>
+          <span class="rating">Рейтинг: 8,5</span>
         </div>
       </div>
       <div class="hotel-item clearfix">
@@ -110,7 +126,7 @@
           <a href="#" class="btn reserve">Забронировать</a>
         </article>
         <div class="stars two">
-          <span class="raiting">Рейтинг:8,9</span>
+          <span class="rating">Рейтинг: 8,9</span>
         </div>
       </div>
       <div class="hotel-item clearfix">
@@ -123,23 +139,23 @@
           <a href="#" class="btn reserve">Забронировать</a>
         </article>
         <div class="stars three">
-          <span class="raiting">Рейтинг:9,2</span>
+          <span class="rating">Рейтинг: 9,2</span>
         </div>
       </div>
     </main>
-    <footer class="main-footer clearfix">
-          <section class="footer-tag">
-            <p>#visitsedona</p>
-          </section>
-          <section class="footer-social">
-            <a class="social-btn social-btn-tw" href="#"></a>
-            <a class="social-btn social-btn-fb" href="#"></a>
-            <a class="social-btn social-btn-yt" href="#"></a>
-          </section>
-          <section class="footer-copyright">
-            <p>Website by</p>
-            <a href="#" class="copyright-name"></a>
-          </section>
+    <footer class="main-footer">
+      <section class="footer-tag">
+        <p>#visitsedona</p>
+      </section>
+      <section class="footer-social">
+        <a class="social-btn social-btn-tw" href="#"></a>
+        <a class="social-btn social-btn-fb" href="#"></a>
+        <a class="social-btn social-btn-yt" href="#"></a>
+      </section>
+      <section class="footer-copyright">
+        <b>Website by</b>
+        <a href="#" class="sprite sprite-icon-copyright"></a>
+      </section>
     </footer>
     </div>
   </body>
