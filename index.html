@@ -25,7 +25,6 @@
     <main class="index-content">
       <div class="index-content-image">
         <img src="img/bg-main.jpg" class="logo" width="1200" height="508" alt="main-photo">
-        <img src="img/mask.png" class="mask" width="1200" height="57" alt="">
       </div>  
       <div class="index-content-title">
         <h2>Седона - небольшой городок в Аризоне,<br>
@@ -37,10 +36,10 @@
           <div class="container clearfix">
             <div class="features-item blue">
               <h2>Настоящий городок</h2>
-              <p>№1</p>
+              <p>— №1 —</p>
               <p>Седона - не аттракцион для туристов, там течёт своя жизнь</p>
             </div>
-            <img src="img/index-fon1.jpg" width="800" height="256" alt="1">
+            <img src="img/index-fon1.jpg" width="800" height="256" alt="1" class="features-image">
           </div>
           <div class="container icon clearfix">
             <div class="features-item icon-1">
@@ -57,28 +56,27 @@
             </div>
           </div>
           <div class="container clearfix">
-            <img class="image-left" src="img/index-fon2.jpg" width="800" height="256" alt="2">
+            <img src="img/index-fon2.jpg" width="800" height="256" alt="2" class="features-image">
             <div class="features-item blue">
               <h2>Там есть мост дьявола</h2>
-              <p>№2</p>
+              <p>— №2 —</p>
               <p>Да, по нему можно пройти, если вы осмелитесь</p>
             </div>
-            
           </div>
           <div class="container gray clearfix">
             <div class="features-item">
               <h2>Небольшая площадь</h2>
-              <p>№3</p>
+              <p>— №3 —</p>
               <p>Все достопримечательности находятся очень близко</p>
             </div>
             <div class="features-item">
               <h2>Красивая дорога</h2>
-              <p>№4</p>
+              <p>— №4 —</p>
               <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </div>
             <div class="features-item">
               <h2>Мало туристов</h2>
-              <p>№5</p>
+              <p>— №5 —</p>
               <p>Большинство едет в Гранд-Каньон и толпится там</p>
             </div>
           </div>
@@ -92,18 +90,28 @@
         <a href="#" class="search-btn">Поиск гостиницы в Седоне</a>  
         <div class="search-form">
           <form method="get" action="#">
-            <label>Дата заезда:
-              <input type="date" id="date-in" value="2016-04-24"> 
-            </label>
-            <label>Дата выезда:
-              <input type="date" id="date-out" value="2016-07-04">
-            </label>
-            <label>Взрослые
-              <input type="number" id="grown" value="2">
-            </label>
-            <label>Дети
-              <input type="number" id="children" value="0">
-            </label>
+            <div class="block clearfix">
+              <label for="date-in">Дата заезда:</label>
+              <input type="text" id="date-in" value="24 апреля 2016" class="date">
+            </div>
+            <div class="block clearfix">
+              <label for="date-out">Дата выезда:</label>
+              <input type="text" id="date-out" value="4 июля 2016"  class="date">
+            </div>
+            <div class="block clearfix">
+              <div class="block-item">
+                <label for="grown">Взрослые:</label>
+                <a href="#" class="icon-minus"></a>
+                <input type="text" id="grown" value="2" class="grown">
+                <a href="#" class="icon-plus"></a>
+              </div>
+              <div class="block-item">
+                <label for="children">Дети:</label>
+                <a href="#" class="icon-minus"></a>
+                <input type="text" id="children" value="0" class="children">
+                <a href="#" class="icon-plus"></a>
+              </div>
+            </div>
             <button class="btn" type="submit">Найти</button>  
           </form>
         </div>

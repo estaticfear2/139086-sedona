@@ -3,7 +3,7 @@ body {
   line-height: 21px;
   font-weight: 400;
   color: #000000;
-  background-color: gray;
+  background-color: #f2f2f2;
   font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   padding: 0;
@@ -28,7 +28,7 @@ h3 {
   font-size: 30px;
 }
 
-.clearfix {
+.clearfix::after {
   content: "";
   display: table;
   clear: both;
@@ -43,6 +43,7 @@ h3 {
   margin: 0 auto;
   background-color: #ffffff;
   font-size: 0;
+  box-shadow: 0 0 15px 5px rgba(0, 1, 1, 0.2);
 }
 
 .main-navigation {
@@ -113,7 +114,7 @@ h3 {
 
 .index-content-image {
   position: relative;
-  margin-bottom: 53px;
+  margin-bottom: 48px;
 }
 
 .logo {
@@ -121,16 +122,18 @@ h3 {
   height: 100%;
 }
 
-.mask {
+.index-content-image::before {
+  content: "";
   position: absolute;
   width: 100%;
   height: 57px;
   bottom: 10px;
   left: 0px;
+  background-image: url("../img/mask.png");
 }
 
 .index-content-title {
-  margin-bottom: 48px;
+  margin-bottom: 52px;
   text-align: center;
   font-size: 14px;
 }
@@ -158,7 +161,7 @@ h3 {
   background-color: #eeeeee;
 }
 
-.container img {
+.container .features-image {
   width: 800px;
   height: 256px;
   float: left;
@@ -171,6 +174,10 @@ h3 {
   line-height: 21px;
 }
 
+.gray h2 {
+  margin-top: 47px;
+}
+
 .features-item p {
   margin: 21px 49px 0px 49px;
   font-size: 14px;
@@ -181,6 +188,10 @@ h3 {
   margin-bottom: 52px;
   font-size: 14px;
   line-height: 21px;
+}
+
+.gray p:last-child {
+  margin-bottom: 60px;
 }
 
 .icon .features-item h2 {
@@ -198,24 +209,24 @@ h3 {
 }
 
 .icon-1 h2::before {
-  top: -101px;
+  top: -100px;
   width: 75px;
   height: 72px;
-  background-position: -291px -5px;
+  background-position: -10px -304px;
 }
 
 .icon-2 h2::before {
   top: -100px;
   width: 74px;
   height: 70px;
-  background-position: -376px -5px;
+  background-position: -10px -396px;
 }
 
 .icon-3 h2::before {
   top: -104px;
   width: 64px;
   height: 75px;
-  background-position: -460px -5px;
+  background-position: -10px -486px;
 }
 
 .icon .features-item p {
@@ -223,7 +234,7 @@ h3 {
 }
 
 .search-form-title {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .search-form-title h2 {
@@ -233,6 +244,7 @@ h3 {
 .search-form-title p {
   text-align: center;
   font-size: 14px;
+  line-height: 24px;
 }
 
 .search-form {
@@ -254,7 +266,6 @@ h3 {
 }
 
 .search-form form {
-/*  display: block;*/
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -266,27 +277,139 @@ h3 {
   background-color: #ffffff;
 }
 
+.block {
+  width: 100%;
+  margin-bottom: 29px;
+}
+
 .search-form label {
+  float: left;
+  width: 100px;
+  padding-top: 10px;
 }
 
-.search-form input[type="date"] {
-  position: relative;
-  width: 346px;
-  margin: 0 0 29px 14px;
+.block-item label {
+  margin-right: 12px;
+}
+
+.search-form .date {
+  float: right;
+  height: 32px;
+  padding-left: 15px;
   background-color: #f2f2f2;
-  padding: 2px 15px;
+  border: 2px solid #f2f2f2;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
   font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;   
 }
 
-.search-form input[type="number"] {
-  width: 114px;
-  margin: 0 0 29px 14px;
+.search-form .date {
+  width: 329px;
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: 306px -171px;
+}
+
+.search-form .date:hover {
+  background-color: #ebebeb;
+  background-position: 306px -255px; 
+}
+
+.search-form .date:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+  background-position: 306px -214px; 
+  outline: none;
+}
+
+.block-item {
+  font-size: 0;
+  width: 50%;
+  float: left;
+  margin-right: 0;
+}
+
+.block-item:last-child {
+  float: right;
+}
+
+.block-item label {
+  font-size: 14px;
+}
+
+.block-item:last-child label {
+  margin-right: 14px;
+  width: 50px;
+  padding-left: 50px;
+}
+
+.block-item input[type="text"] {
+  display: inline-block;
+  position: relative;
+  width: 38px;
+  height: 38px;
+  padding: 0;
   background-color: #f2f2f2;
+  border: none;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: "PT Sans", sans-serif;
+  text-transform: uppercase;
+  vertical-align: top;
+  text-align: center;
+  cursor: pointer;   
+}
+
+.block-item a {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.block-item a::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 12px;
+  height: 2px;
+  background-color: #a9a9a9;
+}
+
+.block-item a.icon-plus::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  background-color: #a9a9a9; 
+}
+
+.block-item a:hover::before,
+.block-item a:hover::after {
+  background-color: #000000;
+}
+
+.block-item a:active::before,
+.block-item a:active::after {
+  background-color: #81b3d2;
 }
 
 .search-form .btn {
   width: 100%;
-  padding: 15px 0;
+  margin-top: 17px;
+  padding: 15px 0 17px 0;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -294,6 +417,7 @@ h3 {
   background-color: #81b3d2;
   border: none;
   cursor: pointer;
+  font-family: "PT Sans", sans-serif;
 }
 
 .search-form .btn:hover {
@@ -303,7 +427,6 @@ h3 {
 .search-form .btn:active {
   background-color: #5496bd;
   color: #88b6d1;
-  /*   ??????????????????????????????  */
 }
 
 .map {
@@ -401,7 +524,7 @@ h3 {
   left: -25px;
   top: -2px;
   background-image: url("../img/sprite.png");
-  background-position: -5px -5px;
+  background-position: -10px -10px;
 }
 
 .item-2 input[type="checkbox"] + .checkbox-indicator {
@@ -411,23 +534,19 @@ h3 {
 .search-item input[type="checkbox"]:checked + .checkbox-indicator{
   width: 26px;
   height: 22px;
-  background-position: -37px -5px;
+  background-position: -10px -52px;
 }
 
 .search-item input[type="checkbox"]:disabled + .checkbox-indicator{
   width: 22px;
   height: 22px;
-  background-position: -109px -5px;
+  background-position: -10px -136px;
 }
 
 .search-item input[type="checkbox"]:disabled:checked + .checkbox-indicator{
   width: 26px;
   height: 22px;
-  background-position: -73px -5px;
-}
-
-.filter-range {
-
+  background-position: -10px -94px;
 }
 
 .price-controls {
@@ -454,11 +573,8 @@ h3 {
 
 .price-controls label {
   display: inline-block;
-
   font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
-
+  line-height: 30px;
   cursor: pointer;
 }
 
@@ -468,13 +584,15 @@ h3 {
   padding-left: 65px;
 }
 
+.price-controls .max-price {
+  padding-left: 56px;
+}
+
 .price-controls input {
   width: 50px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
 }
@@ -487,14 +605,12 @@ h3 {
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
 
@@ -526,12 +642,10 @@ h3 {
   display: block;
   margin: 0 auto;
   padding: 7px 31px;
-
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
@@ -719,28 +833,43 @@ h3 {
   background-color: #604e43;
 }
 
-.rating {
-  float: right;
-  padding: 3px 13px;
-  background-color: #f2f2f2;
-}
-
 .stars {
   float: right;
+  display: inline-block;
+  text-align: right;
   width: 153px;
-  margin-top: 69px;
-  margin-right: 2px;
-  
+  padding-top: 5px;
+}
+
+.stars .star {
+  position: relative;
+  margin-left: 24px;
+}
+
+.stars .star::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 17px;
+  top: 0;
+  left: -18px;
+  background-image: url("../img/star.png");  
+}
+
+.rating {
+  display: inline-block;
+  background-color: #f2f2f2;
+  margin-top: 45px;
+  padding: 2px 13px;
 }
 
 /*--------------------footer----------------------------*/
 
 .main-footer {
   width: 100%;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   text-align: center;
   margin-top: -120px;
-  opacity: 0.9;
 }
 
 .main-footer section {
@@ -780,7 +909,6 @@ h3 {
 
 .social-btn:active {
   background-color: #5496bd;
-  /*  ??????????? */
 }
 
 .social-btn::before {
@@ -796,19 +924,25 @@ h3 {
 .social-btn-tw::before {
   width: 17px;
   height: 15px;
-  background-position: -922px -5px;
+  background-position: -10px -797px;
 }
 
 .social-btn-fb::before {
   width: 10px;
   height: 19px;
-  background-position: -903px -5px;
+  background-position: -10px -758px;
 }
 
 .social-btn-yt::before {
   width: 20px;
   height: 16px;
-  background-position: -950px -5px;
+  background-position: -10px -832px;
+}
+
+.social-btn-tw:active::before,
+.social-btn-fb:active::before,
+.social-btn-yt:active::before {
+  opacity: 0.3;
 }
 
 .footer-copyright b {
@@ -825,61 +959,14 @@ h3 {
   width: 113px;
   height: 39px;
   background-image: url("../img/sprite.png");
-  background-position: -534px -5px;
+  background-position: -10px -581px;
   vertical-align: middle;
 }
 
 .footer-copyright a:hover {
-  background-position: -780px -5px;
+  background-position: -10px -699px;
 }
 
 .footer-copyright a:active {
-  background-position: -657px -5px;
+  background-position: -10px -640px;
 }
-
-/*
-
-sprite
-
-.sprite-date {
-    width: 21px;
-    height: 22px;
-    background-position: -141px -5px;
-}
-
-.sprite-date-active {
-    width: 21px;
-    height: 22px;
-    background-position: -172px -5px;
-}
-
-.sprite-date-hover {
-    width: 21px;
-    height: 22px;
-    background-position: -203px -5px;
-}
-
-.sprite-fb-active {
-    width: 47px;
-    height: 48px;
-    background-position: -234px -5px;
-}
-
-.sprite-star {
-    width: 18px;
-    height: 17px;
-    background-position: -980px -5px;
-}
-
-.sprite-tw-active {
-    width: 46px;
-    height: 48px;
-    background-position: -1008px -5px;
-}
-
-.sprite-yt-active {
-    width: 46px;
-    height: 48px;
-    background-position: -1064px -5px;
-}
-*/
