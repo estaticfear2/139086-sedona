@@ -263,6 +263,7 @@ h3 {
   padding: 31px 0;
   text-align: center;
   text-decoration: none;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -610,22 +611,21 @@ h3 {
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 90px;
-  padding-left: 50px;
-  text-align: left;
-}
-
-.price-controls .max-price {
+  width: 100px;
   padding-left: 56px;
 }
 
 .price-controls input {
-  width: 50px;
+  width: 65px;
   margin: 0;
   color: inherit;
   font: inherit;
   background: none;
   border: none;
+}
+
+.max-price input {
+  width: 77px;
 }
 
 .range-controls {
