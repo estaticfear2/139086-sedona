@@ -1,4 +1,5 @@
 var link = document.querySelector(".search-btn");
+var link_a = document.querySelector(".btn");
 var popup = document.querySelector(".search-form");
 var datein = popup.querySelector("#date-in");
 var dateout = popup.querySelector("#date-out");
@@ -7,8 +8,19 @@ var children = popup.querySelector("#children");
 var storage_grown = localStorage.getItem("grown");
 var storage_children = localStorage.getItem("children");
 
+document.addEventListener("DOMContentLoaded", function(event){
+    popup.classList.add("search-form-hide");
+    console.log("df");
+});
+
+link_a.addEventListener("click", function(event) {
+  event.preventDefault();
+    
+});
+
 link.addEventListener("click", function(event) {
-  event.preventDefault();  
+  event.preventDefault(); 
+  popup.classList.remove("search-form-hide");
   popup.classList.add("search-form-show");
   if (storage_grown) {
     grown.value = storage_grown;
@@ -32,5 +44,5 @@ window.addEventListener("submit", function(event) {
   } else {
           localStorage.setItem("grown", grown.value);
           localStorage.setItem("children", children.value);
-          }
+        }
 });
