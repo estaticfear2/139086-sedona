@@ -330,7 +330,7 @@ h3 {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   cursor: pointer;   
 }
@@ -386,7 +386,7 @@ h3 {
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   vertical-align: top;
   text-align: center;
@@ -446,7 +446,7 @@ h3 {
   background-color: #81b3d2;
   border: none;
   cursor: pointer;
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .search-form .btn:hover {
@@ -494,6 +494,7 @@ h3 {
   float: right;
   width: 328px;
   margin-right: 0;
+  text-align: center;
 }
 
 .search-item h3 {
@@ -668,7 +669,6 @@ h3 {
 }
 
 .btn-transparent {
-  display: block;
   margin: 0 auto;
   padding: 7px 31px;
   font-size: 14px;
