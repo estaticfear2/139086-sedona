@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function(event){
 
 link_a.addEventListener("click", function(event) {
   event.preventDefault();
-    
 });
 
 link.addEventListener("click", function(event) {
