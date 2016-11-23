@@ -611,7 +611,8 @@ h3 {
 .price-controls .min-price,
 .price-controls .max-price {
   width: 90px;
-  padding-left: 65px;
+  padding-left: 50px;
+  text-align: left;
 }
 
 .price-controls .max-price {
@@ -629,7 +630,7 @@ h3 {
 
 .range-controls {
   position: relative;
-  margin-bottom: 32px;
+  margin-bottom: 41px;
   margin-left: 10px;
 }
 
@@ -670,7 +671,7 @@ h3 {
 
 .btn-transparent {
   margin: 0 auto;
-  padding: 7px 31px;
+  padding: 7px 34px;
   font-size: 14px;
   line-height: 21px;
   color: #ffffff;
