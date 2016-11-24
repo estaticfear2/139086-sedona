@@ -310,6 +310,7 @@ h3 {
 }
 
 .block {
+  position: relative;
   width: 100%;
   margin-bottom: 29px;
 }
@@ -326,6 +327,7 @@ h3 {
 
 .search-form .date {
   float: right;
+  width: 329px;
   height: 32px;
   padding-left: 15px;
   background-color: #f2f2f2;
@@ -338,23 +340,37 @@ h3 {
   cursor: pointer;   
 }
 
-.search-form .date {
-  width: 329px;
-  background-image: url("../img/sprite.png");
-  background-repeat: no-repeat;
-  background-position: 306px -171px;
-}
-
 .search-form .date:hover {
   background-color: #ebebeb;
-  background-position: 306px -255px; 
+  border-color: #ebebeb;
 }
 
 .search-form .date:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
-  background-position: 306px -214px; 
   outline: none;
+}
+
+.search-form .icon-date {
+  position: absolute;
+  display: block;
+  width: 21px;
+  height: 22px;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/sprite.png");
+  background-repeat: no-repeat;
+  background-position: -10px -178px;
+  text-decoration: none;
+}
+
+.search-form .icon-date:hover {
+  background-position: -10px -262px; 
+}
+
+.search-form .icon-date:active {
+  background-position: -10px -220px; 
 }
 
 .block-item {
