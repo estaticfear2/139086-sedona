@@ -7,7 +7,7 @@ var children = popup.querySelector("#children");
 var storage_grown = localStorage.getItem("grown");
 var storage_children = localStorage.getItem("children");
 
-document.addEventListener("DOMContentLoaded", function(event){
+document.addEventListener("DOMContentLoaded", function(event) {
   popup.classList.add("search-form-hide");
 });
 
@@ -15,7 +15,7 @@ link.addEventListener("click", function(event) {
   event.preventDefault();
   popup.classList.add("search-form-show");
   if (popup.classList.contains("search-form-hide")) {
-      popup.classList.remove("search-form-hide");
+    popup.classList.remove("search-form-hide");
   }
   if (storage_grown) {
     grown.value = storage_grown;
@@ -26,12 +26,12 @@ link.addEventListener("click", function(event) {
 });
 
 popup.addEventListener("submit", function(event) {
-  if (!datein.value || !dateout.value || !grown.value ||!children.value) {
+  if (!datein.value || !dateout.value || !grown.value || !children.value) {
     event.preventDefault();
   } else {
-          localStorage.setItem("grown", grown.value);
-          localStorage.setItem("children", children.value);
-        }
+    localStorage.setItem("grown", grown.value);
+    localStorage.setItem("children", children.value);
+  }
 });
 
 window.addEventListener("keydown", function(event) {
