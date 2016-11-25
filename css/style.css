@@ -168,7 +168,7 @@ h3 {
 }
 
 .features-item h2 {
-  width: 40%;
+  width: 39%;
   margin: 54px auto 25px auto;
   font-size: 21px;
   line-height: 21px;
@@ -340,6 +340,10 @@ h3 {
   cursor: pointer;   
 }
 
+.search-form .date::-ms-clear {
+  display: none;
+}
+
 .search-form .date:hover {
   background-color: #ebebeb;
   border-color: #ebebeb;
@@ -410,6 +414,7 @@ h3 {
   vertical-align: top;
   text-align: center;
   cursor: pointer;   
+  outline: none;
 }
 
 .block-item a {
@@ -624,26 +629,24 @@ h3 {
   display: inline-block;
   font-size: 14px;
   line-height: 30px;
+  text-transform: uppercase;
   cursor: pointer;
 }
 
 .price-controls .min-price,
 .price-controls .max-price {
-  width: 100px;
   padding-left: 56px;
 }
 
 .price-controls input {
-  width: 65px;
+  width: 70px;
   margin: 0;
+  height: 30px;
   color: inherit;
   font: inherit;
   background: none;
   border: none;
-}
-
-.max-price input {
-  width: 77px;
+  outline: none;
 }
 
 .range-controls {
@@ -886,15 +889,17 @@ h3 {
 
 .stars {
   float: right;
-  display: inline-block;
   text-align: right;
-  width: 153px;
-  padding-top: 5px;
+/*  width: 153px;*/
 }
 
 .stars .star {
   position: relative;
-  margin-left: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 17px;
+  margin-left: 2px;
 }
 
 .stars .star::before {
@@ -902,15 +907,16 @@ h3 {
   position: absolute;
   width: 18px;
   height: 17px;
-  top: 0;
-  left: -18px;
-  background-image: url("../img/star.png");  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("../img/star.png"); 
 }
 
 .rating {
-  display: inline-block;
+  display: block;
   background-color: #f2f2f2;
-  margin-top: 45px;
+  margin-top: 49px;
   padding: 2px 13px;
 }
 
